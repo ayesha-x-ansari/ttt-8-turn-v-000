@@ -6,7 +6,6 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
   index = input_to_index(user_input)
-  puts index
   valid_move = valid_move?(board, index)
   if valid_move
     move(board, index)
@@ -28,7 +27,7 @@ def input_to_index(user_input)
    index = user_input - 1
 end
 def valid_move?(board, index)
-  if position_taken?(board, index) &&  index.betwe`en?(0, 8)
+  if position_taken?(board, index) &&  index.between?(0, 8)
       return true
   else
       return false
